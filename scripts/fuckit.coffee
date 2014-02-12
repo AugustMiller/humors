@@ -1,6 +1,14 @@
-# Watch it, man
+# Description:
+#   Watch your mouth, son.
+#
+# Commands:
+#   hubot the rules - Make sure hubot still knows the rules.
+#
+# Notes:
+#   Keep a bar of soap handy, it's dirty in here.
+
 module.exports = (robot) ->
-  robot.respond /fuck/i, (msg) ->
+  robot.hear /fuck\s/i, (msg) ->
     text = msg.message.text
     thing = text.split(/fuck/)[text.split(/fuck/).length - 1]
-    msg.send "Yeah, fuck " + thing
+    msg.send "Yeah, fuck " + thing.trim()

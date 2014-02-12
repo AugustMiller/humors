@@ -10,5 +10,5 @@
 module.exports = (robot) ->
   robot.hear /fuck\s/i, (msg) ->
     text = msg.message.text
-    thing = text.split(/fuck/)[text.split(/fuck/).length - 1]
-    msg.send "Yeah, fuck " + thing.trim()
+    thing = text.split(/fuck/)[text.split(/fuck/).length - 1].trim()
+    msg.send  ( if thing == "you" then "No," else "Yeah," ) + " fuck " + thing

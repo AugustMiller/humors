@@ -22,7 +22,8 @@
   "dependencies": {
     "hubot": ">= 2.6.0 < 3.0.0",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
-    "hubot-slack": "~1.5.2"
+    "hubot-slack": "~1.5.2",
+    "pg": "~0.10.2"
   },
   "engines": {
     "node": ">= 0.8.x",
